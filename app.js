@@ -13,12 +13,12 @@ const csp = {
   }
 };
 
-// Uncomment to enable Helmet with CSP (equivalent to Flask-Talisman)
-// app.use(helmet.contentSecurityPolicy(csp));
+// Helmet with CSP
+app.use(helmet.contentSecurityPolicy(csp));
 
 // Enable CORS (equivalent to Flask-CORS)
 app.use(cors({
-  origin: 'http://localhost:8000'
+  origin: 'http://localhost:3000'
 }));
 
 // Root URL response
